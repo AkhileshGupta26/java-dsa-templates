@@ -1,0 +1,18 @@
+| Variable | Meaning               |
+| -------- | --------------------- |
+| `pos`    | current digit index   |
+| `isFree` | 0 = LIMITED, 1 = FREE |
+| `sum`    | sum so far            |
+
+
+❓ 1. What am I checking?
+Example:
+sum == K
+
+❓ 2. What info do I need while building?
+Example:
+sum so far
+
+❓ 3. What should I remember?
+Example:
+previous digit / used digits / sum

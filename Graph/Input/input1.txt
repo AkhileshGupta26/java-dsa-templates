@@ -1,0 +1,27 @@
+Type 1 — Edge List Input (MOST COMMON)
+Input:
+
+n = 5
+edges = [[0,1],[0,2],[1,3],[2,4]]
+
+Means:
+
+0 -- 1
+|
+2
+| \
+3  4
+
+List<List<Integer>> graph = new ArrayList<>();
+
+for (int i = 0; i < n; i++) {
+    graph.add(new ArrayList<>());
+}
+
+for (int[] edge : edges) {
+    int u = edge[0];
+    int v = edge[1];
+
+    graph.get(u).add(v);
+    graph.get(v).add(u);   // only if undirected
+}

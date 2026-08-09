@@ -1,0 +1,36 @@
+| Pattern Type        | Goal          | State           | Transition           | Base Case       | Return   |
+| ------------------- | ------------- | --------------- | -------------------- | --------------- | -------- |
+| 🟢 Count Paths      | #ways         | `dp[i][j]`      | `down + right`       | dest → 1        | `+`      |
+| 🟡 Min Path         | min cost      | `dp[i][j]`      | `min(right, down)`   | dest = grid     | `+ grid` |
+| 🔵 Max Path         | max score     | `dp[i][j]`      | `max(right, down)`   | dest = grid     | `+ grid` |
+| 🟣 Obstacles        | avoid blocked | `dp[i][j]`      | skip blocked         | blocked → 0/INF | depends  |
+| 🔴 Multi-dir        | 3/4/8 moves   | `dp[i][j]`      | loop moves           | depends         | min/max  |
+| ⚫ Multi-agent 💀   | 2 persons     | `dp[i][j1][j2]` | 9 combos             | last row        | max      |
+| ⚪ Reverse DP 💀    | survival      | `dp[i][j]`      | `need = next - curr` | dest            | min      |
+| 🟤 Any Start        | free start    | loop all        | same DP              | depends         | max/min  |
+| 🧩 Extra Constraint | k limit       | `dp[i][j][k]`   | reduce k             | k=0 base        | varies   |
+
+int solve(i, j) {
+
+    if (out of bound) return BASE;
+
+    if (at destination) return value;
+
+    int ans = INIT; // INF / -INF / 0
+
+    for (each move) {
+        ans = combine(ans, solve(next_i, next_j));
+    }
+
+    return dp[i][j] = current + ans; // or custom logic
+}
+
+/////(1)Optimization problem
+
+ MAX,MIN, -> RETURN 1e9 or -1e9 like
+
+ //////(2)COUNTING PROBLEM
+
+ return c1+c2
+
+ 

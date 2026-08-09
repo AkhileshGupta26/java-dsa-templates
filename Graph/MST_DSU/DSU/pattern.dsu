@@ -1,0 +1,45 @@
+Pattern 1: Detect Cycle
+Question:
+Will this edge create a cycle?
+Code:
+if(dsu.find(u)==dsu.find(v))
+    cycle
+else
+    dsu.union(u,v);
+
+
+Pattern 2: Count Components
+Question:
+How many groups remain?
+Initially:
+int components=n;
+Whenever:
+union(a,b)
+actually merges:
+components--;
+
+
+Pattern 3: Merge Accounts
+Question:
+These items belong together.
+Example:
+Email A
+Email B
+Email C
+All belong to same person.
+Union them.
+Problem
+Accounts Merge
+This is the most important medium-level DSU problem.
+
+Pattern 4: Grid DSU
+Question:
+Islands
+Land added dynamically
+Treat:
+(row,col)
+as:
+node = row*n + col;
+Then apply DSU.
+Problem
+Number of Islands II

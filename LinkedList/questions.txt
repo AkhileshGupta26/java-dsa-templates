@@ -1,0 +1,16 @@
+https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/description/
+https://leetcode.com/problems/delete-node-in-a-linked-list/description/
+
+
+//// IMPORTANT 10  problems
+
+Reverse Linked List
+Reverse Linked List II
+Reverse Nodes in k-Group
+Palindrome Linked List
+Reorder List
+Linked List Cycle II
+Merge k Sorted Lists
+Sort List
+Copy List with Random Pointer
+Flatten a Multilevel Doubly Linked List

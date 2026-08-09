@@ -1,0 +1,27 @@
+Type 3 — Grid Graph (VERY COMMON)
+
+Input:
+grid = [
+ [1,1,0],
+ [0,1,1]
+]
+
+This is secretly a graph.
+Cells are nodes.
+Neighbors are:
+up down left right
+(or 8 directions)
+
+int[][] dir = {
+    {-1,0},
+    {1,0},
+    {0,-1},
+    {0,1}
+};
+
+
+Used in:
+Number of islands
+flood fill
+rotten oranges
+shortest path in matrix

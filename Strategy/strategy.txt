@@ -1,0 +1,33 @@
+| Topic                    | Intern Priority | SDE Priority | Why it matters              |
+| ------------------------ | --------------- | ------------ | --------------------------- |
+| Arrays + Strings         | 🔥🔥🔥          | 🔥🔥🔥       | Base of everything          |
+| HashMap / Set            | 🔥🔥🔥          | 🔥🔥🔥       | Used in almost all problems |
+| Sliding Window           | 🔥🔥🔥          | 🔥🔥         | Amazon favorite             |
+| Two Pointer              | 🔥🔥            | 🔥🔥         | Optimization pattern        |
+| Binary Search            | 🔥🔥            | 🔥🔥🔥       | Used in tricky problems     |
+| Stack / Queue            | 🔥🔥            | 🔥🔥         | Parentheses, monotonic      |
+| Linked List              | 🔥🔥            | 🔥           | Basic interviews            |
+| Trees (BT + BST)         | 🔥🔥🔥          | 🔥🔥🔥       | VERY common everywhere      |
+| Heap / Priority Queue    | 🔥🔥            | 🔥🔥🔥       | Top K, merging              |
+| Graph (BFS/DFS)          | 🔥🔥            | 🔥🔥🔥       | Google favorite             |
+| Recursion / Backtracking | 🔥              | 🔥🔥🔥       | Hard problems               |
+| Greedy                   | 🔥              | 🔥🔥         | Optimization logic          |
+| Dynamic Programming      | ⭐ (basic only)  | 🔥🔥🔥       | Required for SDE            |
+| Monotonic Stack          | ⭐               | 🔥🔥         | Advanced optimization       |
+| Trie                     | ⭐               | 🔥           | Strings advanced            |
+| Union Find (DSU)         | ❌               | 🔥           | Graph optimization          |
+| Segment Tree             | ❌               | ⭐            | Rare but advanced           |
+
+For Intern:
+Arrays, Strings, Hashing
+Sliding Window
+Trees
+Heap
+Basic Graph
+
+For SDE:
+Now go deeper:
+Graphs (advanced)
+DP
+Binary search (advanced)
+Monotonic stack

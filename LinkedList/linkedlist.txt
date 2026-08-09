@@ -1,0 +1,21 @@
+The Five Primitive Operations
+
+Every Linked List question is built from these.
+
+1. Traverse
+curr = curr.next;
+
+2. Reverse
+prev
+curr
+next
+
+3. Cut
+ListNode second = slow.next;
+slow.next = null;
+
+4. Connect
+tail.next = head;
+    
+5. Alternate Merge
+ 

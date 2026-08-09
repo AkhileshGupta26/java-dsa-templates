@@ -1,0 +1,5 @@
+(1) https://cp-algorithms.com/
+(2) https://cses.fi/
+(3) https://leetcode.com/discuss/post/8330844/all-leetcode-patterns-that-you-need-to-k-smrv/
+
+

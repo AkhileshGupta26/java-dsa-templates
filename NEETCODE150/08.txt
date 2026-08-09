@@ -1,0 +1,39 @@
+https://leetcode.com/problems/valid-sudoku/submissions/2015744037/
+
+36. Valid Sudoku
+Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:
+Each row must contain the digits 1-9 without repetition.
+Each column must contain the digits 1-9 without repetition.
+Each of the nine 3 x 3 sub-boxes of the grid must contain the digits 1-9 without repetition.
+Note:
+A Sudoku board (partially filled) could be valid but is not necessarily solvable.
+Only the filled cells need to be validated according to the mentioned rules.
+
+//SOLUTION
+
+M-1///////USE HASHSET TO VALIDATE ->(1)9 ROWS (2)9 COLS (3)SQUARE boxes
+M-2/////// USING ARRAY[9] like array[26]
+
+ // 3x3 boxes
+        for (int row = 0; row < 9; row += 3) {
+
+            for (int col = 0; col < 9; col += 3) {
+
+                HashSet<Character> set = new HashSet<>();
+
+                for (int i = row; i < row + 3; i++) {
+
+                    for (int j = col; j < col + 3; j++) {
+
+                        char ch = board[i][j];
+
+                        if (ch == '.') continue;
+
+                        if (set.contains(ch)) return false;
+
+                        set.add(ch);
+                    }
+                }
+            }
+        }
+

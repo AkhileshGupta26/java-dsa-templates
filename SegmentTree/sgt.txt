@@ -1,0 +1,74 @@
+| Thing        | Example                      |
+| ------------ | ---------------------------- |
+| merge()      | sum / min / max              |
+| identity()   | 0 / ∞ / -∞                   |
+| node meaning | sum / count / something else |
+
+🧠STEP 1: “WHAT IS THE QUESTION ASKING?”
+
+👉 Convert problem → ONE LINE
+
+Examples:
+
+“sum of range”
+“minimum in range”
+“count of evens”
+“max subarray”
+
+👉 This decides EVERYTHING.
+
+🧠 STEP 2: “WHAT SHOULD A NODE STORE?”
+
+👉 Imagine:
+
+“If I give you a segment [l,r], what info do you need?”
+
+Examples:
+
+Problem	Node stores
+sum	sum
+min	min
+count evens	count
+max subarray	multiple values
+
+👉 THIS is the most important step.
+
+🧠 STEP 3: “HOW TO COMBINE TWO SEGMENTS?”
+
+👉 Ask:
+
+“If I know left + right, how do I get answer?”
+
+Examples:
+
+sum → left + right
+min → min(left, right)
+count → left + right
+
+👉 This becomes your merge()
+
+🧠 STEP 4: “WHAT IS IDENTITY?”
+
+👉 Ask:
+
+“If nothing contributes, what value should I return?”
+
+Examples:
+
+Operation	Identity
+sum	          0
+min	         +∞
+max	         -∞
+
+👉 This fixes your no overlap case
+
+🧠 STEP 5: “DO I NEED UPDATE?”
+
+👉 If YES → segment tree
+👉 If NO → prefix sum might be enough
+
+⚡ SUPER SHORT MEMORY TRICK (REMEMBER THIS)
+
+Whenever stuck, just say:
+
+STORE → MERGE → IDENTITY

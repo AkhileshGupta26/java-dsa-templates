@@ -1,0 +1,16 @@
+(1)Identificaion
+ k th 
+ Smallest or Largest
+
+ (2)Heap
+ kth largest -> Max Heap
+
+ kth Smallest -> Min Heap
+
+Time Complexity of Heap:
+insert → O(log n)
+delete → O(log n)
+peek → O(1)
+
+//QUESTIONS 
+973. K Closest Points to Origin

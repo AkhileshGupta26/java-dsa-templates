@@ -1,0 +1,161 @@
+1. DFS Traversal Template (Most Important)
+
+This is the foundation.
+
+Used in:
+
+preorder
+inorder
+postorder
+tree size
+tree height
+sum of nodes
+search in tree
+
+Core idea:
+
+Go left, go right, combine result.
+
+Typical problems:
+
+Binary Tree Preorder Traversal
+Binary Tree Inorder Traversal
+Binary Tree Postorder Traversal
+Maximum Depth of Binary Tree
+Same Tree
+
+Visual:
+5
+Pattern:
+return f(left) + f(right);
+
+
+2. Bottom-Up / Postorder DP Template
+
+Very important for hard interviews.
+Used when:
+
+Children answer first, parent decides later.
+
+Problems:
+Balanced Binary Tree
+Diameter of Binary Tree
+Maximum Path Sum
+Longest Univalue Path
+
+Core pattern:
+
+int left = solve(root.left);
+int right = solve(root.right);
+
+updateGlobalAnswer();
+
+return something;
+
+Think:
+Collect info from children → compute at parent.
+
+
+3. Top-Down / Passing Information Template
+
+Used when:
+
+Parent passes state to children.
+
+Problems:
+
+Path Sum
+Good Nodes
+Root to Leaf Paths
+Sum Root to Leaf Numbers
+
+Pattern:
+
+dfs(node, currentState)
+
+Examples of state:
+
+current sum
+max value seen
+current path string/list
+
+
+4. Level Order / BFS Template
+Used for level-based questions.
+
+Problems:
+Level Order Traversal
+Right Side View
+Zigzag Traversal
+Minimum Depth
+
+Visual:
+
+5
+Pattern:
+
+Queue<TreeNode> q
+while(!q.isEmpty())
+
+
+5. Build / Construct Tree Template
+Used when building tree from data.
+Problems:
+Sorted Array to BST
+Construct from preorder + inorder
+Construct from inorder + postorder
+
+Pattern:
+
+TreeNode root = new TreeNode(...)
+root.left = ...
+root.right = ...
+
+
+6. BST Property Template
+For Binary Search Tree questions.
+Property:
+left < root < right
+
+Used in:
+
+Search in BST
+Insert into BST
+Delete Node in BST
+Validate BST
+Lowest Common Ancestor in BST
+
+Visual:
+
+4
+
+
+7. Path / Backtracking Template
+Used when:
+Need all paths / combinations.
+Problems:
+Path Sum II
+Binary Tree Paths
+Root to Leaf Paths
+
+Pattern:
+
+path.add(...)
+dfs(...)
+path.remove(...)
+
+
+8. Tree Conversion / Pointer Manipulation Template
+
+Advanced interview pattern.
+
+Problems:
+
+Flatten Binary Tree
+Invert Binary Tree
+Convert BST to Greater Tree
+Populate Next Right Pointer
+
+Pattern:
+
+Change links carefully.

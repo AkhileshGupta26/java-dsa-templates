@@ -1,0 +1,36 @@
+///// SYLLABUS
+
+Shortest Path
+│
+├── Unweighted Graph
+│     └── BFS
+│
+├── Weighted Graph (No Negative Weight)
+│     └── Dijkstra
+│
+├── Weighted Graph (Negative Weight Allowed)
+│     └── Bellman Ford
+│
+└── All Pair Shortest Path
+      └── Floyd Warshall
+
+Mental Model
+Think:
+
+BFS
++
+Priority Queue
++
+Distance Array
+=
+Dijkstra     
+
+
+Comparison of Shortest Path Algorithms 
+
+| Algorithm      | Source    | Negative Edge | Complexity |
+| -------------- | --------- | ------------- | ---------- |
+| BFS            | Single    | ❌             | O(V+E)     |
+| Dijkstra       | Single    | ❌             | O(E logV)  |
+| Bellman-Ford   | Single    | ✅             | O(VE)      |
+| Floyd-Warshall | All Pairs | ✅             | O(V³)      |

@@ -1,0 +1,23 @@
+Valid Anagram
+https://leetcode.com/problems/valid-anagram/description/
+
+PS:Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+
+Example 1:
+Input: s = "anagram", t = "nagaram"
+Output: true
+
+Example 2:
+Input: s = "rat", t = "car"
+Output: false
+
+M-1// TWO HASHMAP
+M-2// 2 ARRAY 26
+M-3//1 ARRAY 26
+
+| Approach     | Time | Space | Key Idea                   | Best Use                           |
+| ------------ | ---- | ----- | -------------------------- | ---------------------------------- |
+| HashMap      | O(n) | O(n)  | Store frequencies in maps  | General/Unicode chars              |
+| Two Arrays   | O(n) | O(1)  | Count freq separately      | Lowercase letters                  |
+| Single Array | O(n) | O(1)  | `+1` for `s`, `-1` for `t` | Most optimal for lowercase letters |
+

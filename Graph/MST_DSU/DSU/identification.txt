@@ -1,0 +1,38 @@
+DSU Recognition Pattern
+
+Whenever you see:
+Pattern 1: Connectivity
+Are two nodes connected?
+How many groups exist?
+Friend circles
+Networks
+Components
+Think:
+DSU or DFS
+
+
+Pattern 2: Dynamic Connectivity
+Edges added one by one
+Think:
+DSU
+because DFS repeatedly is expensive.
+
+Pattern 3: Merge Groups
+Merge accounts
+Merge emails
+Merge users
+Merge sets
+Think:
+DSU
+
+Pattern 4: Cycle Detection While Adding Edges
+Adding an edge creates a cycle?
+Think:
+if(find(u)==find(v))
+Cycle.
+
+Pattern 5: Kruskal MST
+Sort edges
+Avoid cycle
+Think:
+DSU

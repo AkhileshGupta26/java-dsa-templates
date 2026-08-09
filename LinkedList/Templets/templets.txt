@@ -1,0 +1,86 @@
+|||||||||||||||||||  ALL TEMPLETS OF LINKED LIST  |||||||||||||||||||||
+
+
+Traversal
+   |
+   +--> Count Nodes
+   +--> Search
+
+Dummy Node
+   |
+   +--> Remove Node
+   +--> Merge Lists
+
+Fast Slow
+   |
+   +--> Middle Node
+   +--> Cycle
+   +--> Palindrome
+   +--> Reorder
+
+Reverse
+   |
+   +--> Reverse List
+   +--> Reverse Between
+   +--> Reverse K Group
+   +--> Palindrome
+
+Merge
+   |
+   +--> Merge Two Lists
+   +--> Merge K Lists
+
+Gap Method
+   |
+   +--> Remove Nth Node
+   +--> Kth Node From End
+
+
+|||||||||||||||||||||    WHILE LOOP STOPS     |||||||||||||||
+
+Rule 1: "Am I processing a node?"
+
+If YES:
+while(curr != null)
+Example:
+1 -> 2 -> 3 -> null
+Traversal:
+
+ListNode curr = head;
+while(curr != null){
+    System.out.println(curr.val);
+    curr = curr.next;
+}
+
+
+
+Rule 2: "Do I need curr.next inside loop?
+
+If YES:
+while(curr != null && curr.next != null)
+
+
+
+Rule 3: Fast-Slow Pointer
+
+Always:
+while(fast != null && fast.next != null)
+Never:
+while(fast.next != null)
+because fast itself may become null.
+
+
+
+Rule 4: Reverse Linked List
+Template:
+ListNode prev = null;
+ListNode curr = head;
+while(curr != null){
+
+    ListNode next = curr.next;
+
+    curr.next = prev;
+    prev = curr;
+    curr = next;
+    
+}

@@ -1,0 +1,23 @@
+// GRID METHOD
+
+int [][]dir={
+
+    {-1,0},
+    {0,-1},
+    {1,0},
+    {0,1}
+
+};
+for (int[] d : dir) {
+        int nr = r + d[0];
+        int nc = c + d[1];
+
+
+        // ALL CONDITION
+        Boundary check
+         if (nr >= 0 && nr < grid.length &&
+            nc >= 0 && nc < grid[0].length && ..... other CONDITION){
+                dfs(.......);
+            }
+}
+

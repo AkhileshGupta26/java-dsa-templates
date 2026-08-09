@@ -1,0 +1,51 @@
+| Concept        | Method / Pattern            | Time     | Remember                     |
+| -------------- | --------------------------- | -------- | ---------------------------- |
+| Insert         | `put(key,val)`              | O(1) avg | Updates if key exists        |
+| Get            | `get(key)`                  | O(1) avg | Returns `null` if absent     |
+| Safe Get       | `getOrDefault(key,0)`       | O(1)     | ⭐ Most used                  |
+| Exists         | `containsKey(key)`          | O(1)     | Better than `get()!=null`    |
+| Delete         | `remove(key)`               | O(1)     | Used in Sliding Window       |
+| Size           | `size()`                    | O(1)     | Distinct elements count      |
+| Empty          | `isEmpty()`                 | O(1)     | Rare                         |
+| Clear          | `clear()`                   | O(n)     | Remove all                   |
+| Insert Once    | `putIfAbsent()`             | O(1)     | Prefix Sum                   |
+| Replace        | `replace()`                 | O(1)     | Update existing key          |
+| Merge          | `merge(key,1,Integer::sum)` | O(1)     | Alternative frequency update |
+| Iterate Keys   | `keySet()`                  | O(n)     | Keys only                    |
+| Iterate Values | `values()`                  | O(n)     | Values only                  |
+| Iterate Both   | `entrySet()`                | O(n)     | ⭐ Preferred                  |
+
+
+1. Traverse Keys Only
+HashMap<Integer, Integer> map = new HashMap<>();
+
+for (int key : map.keySet()) {
+    if(hm.get(key)){
+        ///do 
+    }
+    System.out.println(key);
+}
+
+
+2. Traverse Values Only
+for (int value : map.values()) {
+    System.out.println(value);
+}
+
+
+
+3. Traverse Key + Value ⭐⭐⭐⭐⭐ (Most Important)
+
+for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+    int key = entry.getKey();
+    int value = entry.getValue();
+
+    System.out.println(key + " -> " + value);
+}
+
+
+4. Java 10+ (var)
+for (var entry : map.entrySet()) {
+    System.out.println(entry.getKey());
+    System.out.println(entry.getValue());
+}

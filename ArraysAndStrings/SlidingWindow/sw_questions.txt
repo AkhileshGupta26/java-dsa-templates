@@ -1,0 +1,25 @@
+(1)2090. K Radius Subarray Averages (LC)   -> use long instead of int 
+(2)3. Longest Substring Without Repeating Characters(LC) -> variable sliding window
+(3)Longest Substring with k unique Characters
+(4)Count Occurences of Anagrams(gfg) https://www.geeksforgeeks.org/problems/count-occurences-of-anagrams5839/1
+(5)239. Sliding Window Maximum(lc)concept of monotonic deque  ##v.v.v.v IMP
+(5)424. Longest Repeating Character Replacement(lc)
+(6)2401. Longest Nice Subarray(lc)sliding window+ bit manipulation
+(7)992. Subarrays with K Different Integers (AtMost pattern or pick not pick sliding window)
+(8)930. Binary Subarrays With Sum
+(9)1248. Count Number of Nice Subarrays
+(10)567. Permutation in String(easy,try to solve using array 26)
+🟢 AT MOST K problem
+👉 Question says:
+at most / ≤ / no more than / up to
+🔴 EXACT K problem
+👉 Question says:
+exactly / equal to k
+
+
+
+
+
+
+
+

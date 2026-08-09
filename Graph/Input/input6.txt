@@ -1,0 +1,8 @@
+// weighhted graph
+
+for (int[] e : edges) {
+    int u = e[0], v = e[1], w = e[2];
+    graph.get(u).add(new int[]{v, w});   // directed
+    // graph.get(v).add(new int[]{u, w}); // add this for undirected
+}
+    

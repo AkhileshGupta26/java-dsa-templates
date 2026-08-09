@@ -1,0 +1,20 @@
+//////// DSU (Disjoint Set Union)  ////////
+
+Why Was DSU Invented?
+Suppose interviewer asks:
+Are node 2 and node 7 connected?
+
+Normal bfs or dfs -> O(N+M)
+Using dsu -> O(1)
+
+
+
+Disjoint Set | Union by Rank | Union by Size | Path Compression: G-46
+
+Question: Given two components of an undirected graph
+The question is whether node 1 and node 5 are in the same component or not.
+
+
+IMP:ALSO KNOW AS UNION FIND
+UNION->combine two set(a,b)
+FIND -> find two set(a,b) are in same set

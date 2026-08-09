@@ -1,0 +1,19 @@
+(a, b) -> {
+    if (a.getValue() == b.getValue()) {
+        return a.getKey() - b.getKey();
+    }
+    return b.getValue() - a.getValue();
+}
+👉 First compare frequency
+👉 If tie → compare key
+
+🔥Real meaning
+
+
+(a, b) -> a - b
+
+👉 “Give priority to smaller”
+
+(a, b) -> b - a
+
+👉 “Give priority to larger”

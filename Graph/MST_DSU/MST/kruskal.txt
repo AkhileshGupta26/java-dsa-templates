@@ -1,0 +1,28 @@
+What is Kruskal's Algorithm?
+
+Goal:
+Find Minimum Spanning Tree (MST)
+
+Requirements:
+
+1. Connect all nodes
+2. No cycles
+3. Minimum total weight
+
+Core Idea
+Instead of growing a tree like Prim,
+
+Kruskal says:
+Take the cheapest edge available.
+
+Then:
+If it creates a cycle → Skip
+Otherwise → Take it
+
+Repeat
+
+Why DSU is Perfect Here
+Cycle detection becomes:
+if(find(u)==find(v))
+That's O(1) amortized.
+Without DSU we'd need DFS every edge.

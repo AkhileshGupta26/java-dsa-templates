@@ -1,0 +1,37 @@
+(1)Pattern 1:
+Keep history.
+Example
+Undo
+Browser History
+Backspace
+Need previous states.
+Use Stack.
+
+(2)Pattern 2:
+Need nearest element.
+Example
+Nearest Greater
+Nearest Smaller
+Use Monotonic Stack.
+
+(3)Pattern 3
+Need matching pairs.
+Example
+()
+{}
+[]
+Use Stack.
+
+(4)Pattern 4
+Need reverse processing.
+Example
+Evaluate postfix
+Decode string
+Use Stack.
+
+(5)Pattern 5
+Need to remember unfinished work.
+DFS
+Tree traversal
+Expression parsing
+Use Stack.

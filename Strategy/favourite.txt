@@ -1,0 +1,209 @@
+| Company     | Favorite Topics                                                   |
+| ----------- | ----------------------------------------------------------------- |
+| Google      | Graphs, Trees, DP, Greedy, advanced algorithms                    |
+| Meta        | Arrays, HashMap, Trees, Graphs, DFS/BFS                           |
+| Microsoft   | Trees, Graphs, DP, implementation                                 |
+| Apple       | Arrays, Strings, Trees, Design                                    |
+| Uber        | Graphs, BFS, Dijkstra, Union Find                                 |
+| Bloomberg   | HashMap, Heap, Design, Strings                                    |
+| Jane Street | Math, Greedy, Data Structures                                     |
+| Amazon      | Arrays, HashMap, Sliding Window, Greedy, Heap, BFS, Binary Search |
+
+
+Tier 1 (Amazon's absolute favorites)
+1. Arrays + Simulation ⭐⭐⭐⭐⭐
+
+This is Amazon's biggest strength.
+Not "reverse array."
+Instead, implementation-heavy questions like:
+
+Warehouse inventory
+Robot movement
+Delivery routes
+Server allocation
+Customer requests
+
+Almost every OA contains at least one implementation-based array problem.
+
+Examples:
+
+Rotate
+Prefix/Suffix
+Frequency
+Rearrangement
+Simulation
+
+Probability: ~90%
+
+2. HashMap ⭐⭐⭐⭐⭐
+
+Amazon loves counting.
+
+Questions like:
+
+Frequency
+Pair counting
+Distinct elements
+Duplicate detection
+
+Nearly every OA has a HashMap solution somewhere.
+
+Examples
+
+Two Sum
+Subarray Sum
+Group Anagrams
+Frequency Sort
+
+Probability: ~75%
+
+3. Sliding Window ⭐⭐⭐⭐⭐
+
+This appears repeatedly.
+
+Especially
+
+Longest
+Maximum
+Minimum
+At most K
+Exactly K
+
+Examples
+
+Fruit Into Baskets
+Longest Unique Substring
+Minimum Window
+
+Probability: ~65%
+
+Tier 2
+Binary Search ⭐⭐⭐⭐
+
+Amazon particularly likes Binary Search on Answer.
+
+Examples
+
+Can we finish within X days?
+
+Can K robots do this?
+
+Minimum capacity?
+
+Maximum minimum distance?
+
+Examples
+
+Koko
+Ship Packages
+Split Array
+
+Probability: ~45%
+
+Heap ⭐⭐⭐⭐
+
+Very common.
+
+Questions involving
+
+Top K
+
+Merge
+
+Scheduling
+
+Priority
+
+Examples
+
+Meeting Rooms
+Top K
+K Closest
+Merge K Lists
+
+Probability: ~45%
+
+Greedy ⭐⭐⭐⭐
+
+Amazon asks a surprising amount of greedy.
+
+Examples
+
+Task Scheduling
+Interval
+Resource Allocation
+Minimum Operations
+Tier 3
+BFS
+
+Amazon likes BFS much more than DFS.
+
+Especially
+
+Grid
+
+Shortest Path
+
+Multi-source BFS
+
+Examples
+
+Rotting Oranges
+Number of Islands
+Walls and Gates
+
+Probability
+
+~30%
+
+Prefix Sum
+
+Often combined with
+
+HashMap
+
+Sliding Window
+
+Matrix
+
+Very common implementation.
+
+Tier 4
+
+Trees
+
+Mostly
+
+Traversal
+
+BST
+
+Level Order
+
+LCA
+
+Nothing too crazy.
+
+Tier 5
+
+Graph
+
+People think Amazon loves Graph.
+
+Actually
+
+No.
+
+Compared to Google
+
+Amazon asks very little advanced graph.
+
+Mostly
+
+Simple BFS
+
+Simple DFS
+
+Topological Sort
+
+Union Find
