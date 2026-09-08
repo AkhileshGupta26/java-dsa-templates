@@ -49,3 +49,7 @@ for (var entry : map.entrySet()) {
     System.out.println(entry.getKey());
     System.out.println(entry.getValue());
 }
+
+5.Printing key,val pair as (key=val)
+System.out.println(hm);
+we get output as: {2=4, 3=6, 4=8}
