@@ -1,0 +1,352 @@
+                    Map
+                     |
+        +------------+-------------+
+        |            |             |
+    HashMap     LinkedHashMap    TreeMap
+
+2. LinkedHashMap ⭐⭐⭐⭐
+LinkedHashMap is basically a HashMap that remembers insertion order.
+
+3. TreeMap ⭐⭐⭐⭐
+TreeMap keeps the keys sorted.
+
+| Map                      | Core data structure / idea  | Main superpower                   | Typical complexity |
+| -----------------------  | --------------------------- | --------------------------------- | ------------------ |
+| **HashMap** ⭐⭐⭐⭐⭐ | Hash table                  | **Fast lookup**                   | `get/put` O(1) avg |
+| **TreeMap** ⭐⭐⭐⭐   | Red-Black Tree              | **Sorted keys**                   | `get/put` O(log n) |
+| **LinkedHashMap** ⭐⭐⭐| Hash table + linked entries | **Preserve order**                | `get/put` O(1) avg |
+| **EnumMap** ⭐           | Enum-specialized structure  | **Efficient enum keys**           | O(1)               |
+| **Hashtable** ⭐         | Hash table                  | Legacy synchronization            | O(1) avg           |
+| **ConcurrentHashMap** ⭐ | Concurrent hash table       | **Thread-safe concurrent access** | O(1) avg           |
+
+1. HashMap ⭐⭐⭐⭐⭐ — "Find by hashing"
+Core logic
+key
+ ↓
+hashCode()
+ ↓
+hash
+ ↓
+bucket
+ ↓
+find key
+ ↓
+value
+
+Conceptually:
+
+              HashMap
+                 |
+        +--------+--------+
+        |        |        |
+     bucket0  bucket1  bucket2 ...
+                 |
+             key/value
+
+Example:
+
+HashMap<Integer, String> map = new HashMap<>();
+
+map.put(10, "A");
+map.put(20, "B");
+map.put(30, "C");
+
+When you do:
+
+map.get(20);
+
+Java doesn't normally scan:
+
+10 → 20 → 30
+
+Instead, it uses the key's hash to determine where to look.
+
+Why O(1) average?
+
+Because hashing tries to take you directly to the appropriate bucket.
+
+Without hashing:
+10
+20
+30
+40
+50
+...
+→ potentially scan many
+
+With hashing:
+20
+ ↓
+hash
+ ↓
+bucket
+Main advantage
+
+Very fast lookup.
+
+Main disadvantage
+
+It doesn't maintain a useful ordering.
+
+HashMap<Integer, String> map = new HashMap<>();
+
+Think:
+
+HashMap = "I don't care about order. Just find my key fast."
+
+2. TreeMap ⭐⭐⭐⭐ — "Find by sorted tree"
+Core logic
+
+TreeMap uses a Red-Black Tree, which is a self-balancing binary search tree.
+
+Conceptually:
+
+             20
+            /  \
+          10    30
+         / \    / \
+        5  15  25  40
+
+Keys are maintained in sorted order.
+
+TreeMap<Integer, String> map = new TreeMap<>();
+
+map.put(30, "C");
+map.put(10, "A");
+map.put(20, "B");
+
+System.out.println(map);
+
+Result:
+
+{10=A, 20=B, 30=C}
+
+Even though insertion was:
+
+30 → 10 → 20
+
+the Map maintains:
+
+10 → 20 → 30
+Why O(log n)?
+
+A balanced tree has approximately:
+
+height = log₂(n)
+
+So finding a key involves going down only about log n levels.
+
+The superpower
+
+TreeMap gives you ordered operations:
+
+map.firstKey();
+map.lastKey();
+
+map.floorKey(x);
+map.ceilingKey(x);
+
+map.lowerKey(x);
+map.higherKey(x);
+
+For example:
+
+TreeMap<Integer, String> map = new TreeMap<>();
+
+map.put(10, "A");
+map.put(20, "B");
+map.put(30, "C");
+
+System.out.println(map.floorKey(25));
+
+Output:
+
+20
+
+Meaning:
+
+largest key ≤ 25
+
+Main advantage
+
+Sorted keys + powerful range/neighbor operations.
+
+Main disadvantage
+
+Slower than HashMap:
+
+HashMap → O(1) average
+TreeMap → O(log n)
+
+Think:
+
+TreeMap = "I need my keys ordered."
+
+3. LinkedHashMap ⭐⭐⭐ — "HashMap + linked order"
+
+This one is extremely easy once you understand HashMap.
+
+Normal HashMap:
+
+Hash table
+   +
+buckets
+
+LinkedHashMap essentially adds a linked structure connecting entries.
+
+Conceptually:
+
+Hash table
+   +
+linked list
+
+A → B → C → D
+
+So:
+
+LinkedHashMap<Integer, String> map =
+    new LinkedHashMap<>();
+
+map.put(30, "C");
+map.put(10, "A");
+map.put(20, "B");
+
+Iteration follows insertion order:
+
+30 → 10 → 20
+
+Output:
+
+{30=C, 10=A, 20=B}
+Why still O(1) average?
+
+It still uses hashing for lookup.
+
+The linked structure is mainly used to maintain order.
+
+Special feature
+
+It can also maintain access order, which is useful for implementing LRU caches.
+
+Think:
+
+LinkedHashMap = HashMap + order
+
+4. EnumMap ⭐ — "Optimized Map for enum keys"
+
+This one is specialized.
+
+Suppose:
+
+enum Day {
+    MONDAY,
+    TUESDAY,
+    WEDNESDAY
+}
+
+You can create:
+
+EnumMap<Day, Integer> map =
+    new EnumMap<>(Day.class);
+
+map.put(Day.MONDAY, 10);
+map.put(Day.TUESDAY, 20);
+
+The important thing is:
+
+Keys MUST be enum constants.
+
+Internally, Java can take advantage of the fact that enum constants have a fixed set/order.
+
+Conceptually, it can behave more like:
+
+enum ordinal
+
+MONDAY    → 0
+TUESDAY   → 1
+WEDNESDAY → 2
+
+        ↓
+
+array-like storage
+
+That's why EnumMap can be very efficient.
+
+Think:
+
+EnumMap = Map specially optimized for enum keys.
+
+For normal LeetCode/DSA problems, you rarely need it.
+
+5. Hashtable ⭐ — "Old synchronized HashMap"
+
+Hashtable is basically an old legacy hash-based Map.
+
+Hashtable<Integer, String> map =
+    new Hashtable<>();
+
+It uses hashing like HashMap.
+
+So conceptually:
+
+Hashtable
+    ↓
+Hashing
+    ↓
+Buckets
+
+But it has historical differences:
+
+HashMap
+→ modern
+→ allows null
+
+Hashtable
+→ legacy
+→ synchronized
+→ doesn't allow null
+Why don't we normally use it?
+
+Modern Java provides better concurrency options such as:
+
+ConcurrentHashMap
+
+Think:
+
+Hashtable = old synchronized HashMap.
+
+For DSA, don't spend much time on it.
+
+6. ConcurrentHashMap ⭐ — "HashMap designed for multiple threads"
+
+This is about concurrency, not a different basic lookup idea.
+
+Imagine multiple threads doing:
+
+Thread 1 → put()
+Thread 2 → get()
+Thread 3 → remove()
+Thread 4 → put()
+
+on the same Map.
+
+A normal:
+
+HashMap
+
+is not designed for concurrent modification by multiple threads.
+
+ConcurrentHashMap is.
+
+ConcurrentHashMap<Integer, String> map =
+    new ConcurrentHashMap<>();
+
+It provides thread-safe operations while allowing much more concurrency than simply synchronizing the entire map.
+
+Important restriction
+
+It does not allow null keys or null values.
+
+Think:
+
+ConcurrentHashMap = hash-based Map built for concurrent access.
